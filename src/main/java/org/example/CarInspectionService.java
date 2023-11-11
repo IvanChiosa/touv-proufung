@@ -41,6 +41,7 @@ public class CarInspectionService {
     public boolean checkIfCarHaveDoors(Car car)  {
         int doors = car.getNumbersOfDoors();
         return doors == 3 || doors == 5;
+
     }
 
 
