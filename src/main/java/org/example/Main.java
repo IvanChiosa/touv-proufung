@@ -4,7 +4,6 @@ public class Main {
 
         // 1. Lege die ein neues java Github Projekt an
 
-
 //        Car car1 = new Car(2);
 //        Car car4 = new Car(2);
 //        Car car5 = new Car(true);
@@ -23,11 +22,19 @@ public class Main {
 //            System.out.println("Das auto hat nicht 3 oder 5 Türen");
 //        }
 
-        Car car = new Car(4, 1, true, true);
+        Car car = new Car(4, 3, true, true);
+        Car car1 = new Car(3, 5, false, false);
 
         CarInspectionService carInspectionService = new CarInspectionService();
         boolean isCarValid  = carInspectionService.checkCar(car);
         if(isCarValid) {
+            System.out.println("Das Auto erfüllt alle Anforderungen.");
+        } else {
+            System.out.println("Das Auto erfüllt nicht alle Anforderungen.");
+        }
+
+        boolean isCarValid1 = carInspectionService.checkCar(car1);
+        if(isCarValid1) {
             System.out.println("Das Auto erfüllt alle Anforderungen.");
         } else {
             System.out.println("Das Auto erfüllt nicht alle Anforderungen.");

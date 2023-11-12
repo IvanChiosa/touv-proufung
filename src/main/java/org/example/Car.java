@@ -1,5 +1,4 @@
 package org.example;
-
 import java.util.Objects;
 
 public class Car {
@@ -9,9 +8,7 @@ public class Car {
     private int numbersOfDoors;
     private boolean seatBelt;
     private boolean airbag;
-    private String carName;
 
-    private boolean hasTires;
 
     // 3. Lege dir die getter-, setter-, equals-, hashcode-, und die ToString- Methoden an.
     public int getNumberOfTires() {
@@ -46,37 +43,18 @@ public class Car {
         this.airbag = airbag;
     }
 
-    public boolean isHasTires() {
-        return hasTires;
-    }
-
-    public void setHasTires(boolean hasTires) {
-        this.hasTires = hasTires;
-    }
-
-    public String getCarName() {
-        return carName;
-    }
-
-    public boolean hasTires() {
-        return hasTires();
-    }
-
-    public void setCarName(String carName) {
-        this.carName = carName;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return numberOfTires == car.numberOfTires && numbersOfDoors == car.numbersOfDoors && seatBelt == car.seatBelt && airbag == car.airbag && hasTires == car.hasTires && Objects.equals(carName, car.carName);
+        return numberOfTires == car.numberOfTires && numbersOfDoors == car.numbersOfDoors && seatBelt == car.seatBelt && airbag == car.airbag;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numberOfTires, numbersOfDoors, seatBelt, airbag, carName, hasTires);
+        return Objects.hash(numberOfTires, numbersOfDoors, seatBelt, airbag);
     }
 
     @Override
@@ -86,8 +64,6 @@ public class Car {
                 ", numbersOfDoors=" + numbersOfDoors +
                 ", seatBelt=" + seatBelt +
                 ", airbag=" + airbag +
-                ", carName='" + carName + '\'' +
-                ", hasTires=" + hasTires +
                 '}';
     }
 
@@ -98,6 +74,8 @@ public class Car {
         this.seatBelt = seatBelt;
         this.airbag = airbag;
     }
+
+
 //    public Car(int numberOfTires) {
 //       this.numberOfTires = numberOfTires;
 //    }
