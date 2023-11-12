@@ -3,6 +3,8 @@ package org.example;
 //import java.util.ArrayList;
 //import java.util.List;
 
+
+
 public class CarInspectionService {
 
     // 5. Lege dir eine Klasse "CarInspectionService" an.
