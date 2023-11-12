@@ -1,7 +1,7 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
 public class CarInspectionService {
 
@@ -56,5 +56,6 @@ public class CarInspectionService {
         boolean doorsCheck = checkIfCarHaveDoors(car);
 
         return tiresCheck && seatBeltCheck && airbagCheck && doorsCheck;
+
     }
 }
